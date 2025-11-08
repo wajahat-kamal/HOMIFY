@@ -12,11 +12,6 @@ import project_img_3 from "./project_img_3.jpg";
 import project_img_4 from "./project_img_4.jpg";
 import project_img_5 from "./project_img_5.jpg";
 import project_img_6 from "./project_img_6.jpg";
-import project_img_7 from "./project_img_7.avif";
-
-import profile_img_1 from "./profile_img_1.png";
-import profile_img_2 from "./profile_img_2.png";
-import profile_img_3 from "./profile_img_3.png";
 
 export const assets = {
   logo,
@@ -70,12 +65,7 @@ export const projectsData = [
     location: "Chicago",
     image: project_img_6,
   },
-  {
-    title: "Harbor Heights",
-    price: "$3,10,000",
-    location: "Miami",
-    image: project_img_7,
-  },
+
 ];
 
 export const testimonialsData = [
