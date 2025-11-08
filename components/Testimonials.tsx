@@ -1,18 +1,26 @@
 import React, { useRef } from "react";
 import { assets, testimonialsData } from "../assets/assets.js";
+import Image from "next/image.js";
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
 
-  const scroll = (direction) => {
-    const container = scrollRef.current;
-    const cardWidth = container.firstChild?.offsetWidth || 350; // auto-detect card width
-    const scrollAmount = cardWidth + 24; // 24 = gap (gap-6 = 1.5rem)
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+  
+    const container = scrollRef.current as HTMLDivElement;
+  
+    const firstChild = container.firstChild as HTMLElement | null;
+    const cardWidth = firstChild?.offsetWidth || 350; 
+  
+    const scrollAmount = cardWidth + 24;
+  
     container.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
+  
 
   return (
     <section
@@ -40,8 +48,10 @@ const Testimonials = () => {
             onClick={() => scroll("left")}
             className="p-3 rounded-xl bg-gray-800/70 border border-gray-700 hover:bg-primary/30 hover:border-primary/40 backdrop-blur-sm transition-all duration-300"
           >
-            <img
+            <Image
               src={assets.left_arrow}
+              width={20}
+              height={20}
               alt="Previous"
               className="w-4 h-4 sm:w-5 sm:h-5 invert"
             />
@@ -50,8 +60,10 @@ const Testimonials = () => {
             onClick={() => scroll("right")}
             className="p-3 rounded-xl bg-gray-800/70 border border-gray-700 hover:bg-primary/30 hover:border-primary/40 backdrop-blur-sm transition-all duration-300"
           >
-            <img
+            <Image
               src={assets.right_arrow}
+              width={20}
+              height={20}
               alt="Next"
               className="w-4 h-4 sm:w-5 sm:h-5 invert"
             />
@@ -70,8 +82,10 @@ const Testimonials = () => {
             className="min-w-[300px] sm:min-w-[340px] bg-gradient-to-b from-[#111827] to-[#0d1320] flex flex-col items-center text-center p-8 rounded-2xl shadow-lg border border-white/10 hover:border-primary/50 hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2"
           >
             {/* User Image */}
-            <img
+            <Image
               src={item.image}
+              width={80}
+              height={80}
               alt={item.name}
               className="w-20 h-20 rounded-full object-cover border-2 border-primary shadow-md mb-4"
             />
@@ -85,9 +99,11 @@ const Testimonials = () => {
               {Array(item.rating)
                 .fill()
                 .map((_, i) => (
-                  <img
+                  <Image
                     key={i}
                     src={assets.star_icon}
+                    width={20}
+                    height={20}
                     alt="star"
                     className="w-5 h-5"
                   />
