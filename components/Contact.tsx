@@ -4,12 +4,12 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
 
-    formData.append("access_key", import.meta.env.VITE_WEB3_ACCESS_KEY);
+    formData.append("access_key", process.env.NEXT_WEB3_ACCESS_KEY || "");
 
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -22,7 +22,7 @@ const Contact = () => {
     if (data.success) {
       setResult("");
       toast.success("Form Submitted Successfully");
-      event.target.reset();
+      (event.target as HTMLFormElement).reset();
     } else {
       console.log("Error", data);
         setResult('');
