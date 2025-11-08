@@ -7,20 +7,19 @@ const Testimonials = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-  
+
     const container = scrollRef.current as HTMLDivElement;
-  
+
     const firstChild = container.firstChild as HTMLElement | null;
-    const cardWidth = firstChild?.offsetWidth || 350; 
-  
+    const cardWidth = firstChild?.offsetWidth || 350;
+
     const scrollAmount = cardWidth + 24;
-  
+
     container.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
-  
 
   return (
     <section
@@ -96,18 +95,16 @@ const Testimonials = () => {
 
             {/* Stars */}
             <div className="flex justify-center mb-4">
-              {Array(item.rating)
-                .fill()
-                .map((_, i) => (
-                  <Image
-                    key={i}
-                    src={assets.star_icon}
-                    width={20}
-                    height={20}
-                    alt="star"
-                    className="w-5 h-5"
-                  />
-                ))}
+              {[...Array(item.rating)].map((_, i) => (
+                <Image
+                  key={i}
+                  src={assets.star_icon}
+                  width={20}
+                  height={20}
+                  alt="star"
+                  className="w-5 h-5"
+                />
+              ))}
             </div>
 
             {/* Review */}
