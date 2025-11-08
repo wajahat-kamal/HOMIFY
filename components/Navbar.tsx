@@ -27,8 +27,16 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer select-none">
-          <Image src="/logo.jpeg" alt="Homify" width={36} height={36} className="w-9 h-9 object-contain rounded-2xl" />
-          <h1 className="text-2xl font-bold text-white tracking-tight">HOMIFY</h1>
+          <Image
+            src="/logo.png"
+            alt="Homify"
+            width={36}
+            height={36}
+            className="w-9 h-9 object-contain"
+          />
+          <h1 className="text-2xl font-bold text-white tracking-tight">
+            HOMIFY
+          </h1>
         </div>
 
         {/* Desktop links */}
@@ -71,7 +79,9 @@ export default function Navbar() {
       {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         } z-40`}
         onClick={() => setIsOpen(false)}
       />
@@ -88,7 +98,13 @@ export default function Navbar() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Image src="/logo.svg" alt="Homify" width={32} height={32} className="w-8 h-8 object-contain" />
+              <Image
+                src="/logo.svg"
+                alt="Homify"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+              />
               <h2 className="text-lg font-bold text-white">HOMIFY</h2>
             </div>
             <button
@@ -104,7 +120,11 @@ export default function Navbar() {
                 stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

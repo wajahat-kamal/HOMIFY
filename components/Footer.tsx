@@ -9,11 +9,11 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2 cursor-pointer select-none mb-3">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Homify"
               width={36}
               height={36}
-              className="w-9 h-9 object-contain rounded-2xl"
+              className="w-9 h-9 object-contain"
             />
             <h1 className="text-2xl font-bold text-white tracking-tight">
               HOMIFY
