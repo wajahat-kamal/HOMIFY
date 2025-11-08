@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
+import Image from "next/image";
 
 const NAV_ITEMS = ["Home", "About", "Projects", "Testimonials", "Contact"];
 
@@ -25,7 +26,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer select-none">
-          <img src="/logo.svg" alt="Homify" className="w-9 h-9 object-contain" />
+          <Image src="/logo.svg" alt="Homify" width={36} height={36} className="w-9 h-9 object-contain" />
           <h1 className="text-2xl font-bold text-white tracking-tight">HOMIFY</h1>
         </div>
 
@@ -52,8 +53,10 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <div className="md:hidden">
-          <img
+          <Image
             onClick={() => setIsOpen(true)}
+            width={40}
+            height={40}
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -84,7 +87,7 @@ export default function Navbar() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/logo.svg" alt="Homify" className="w-8 h-8 object-contain" />
+              <Image src="/logo.svg" alt="Homify" width={32} height={32} className="w-8 h-8 object-contain" />
               <h2 className="text-lg font-bold text-white">HOMIFY</h2>
             </div>
             <button
