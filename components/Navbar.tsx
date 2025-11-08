@@ -27,7 +27,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer select-none">
-          <Image src="/logo.svg" alt="Homify" width={36} height={36} className="w-9 h-9 object-contain" />
+          <Image src="/logo.jpeg" alt="Homify" width={36} height={36} className="w-9 h-9 object-contain rounded-2xl" />
           <h1 className="text-2xl font-bold text-white tracking-tight">HOMIFY</h1>
         </div>
 

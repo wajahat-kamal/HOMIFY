@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -6,7 +7,18 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {/* Brand Section */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-3">Homify</h2>
+          <div className="flex items-center gap-2 cursor-pointer select-none mb-3">
+            <Image
+              src="/logo.jpeg"
+              alt="Homify"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain rounded-2xl"
+            />
+            <h1 className="text-2xl font-bold text-white tracking-tight">
+              HOMIFY
+            </h1>
+          </div>
           <p className="text-gray-400 text-sm leading-relaxed">
             Building homes that inspire and empower lives. Your dream home
             awaits — discover it with Homify.
