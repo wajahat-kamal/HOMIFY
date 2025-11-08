@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
