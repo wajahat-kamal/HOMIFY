@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from "react";
 import { assets, testimonialsData } from "../assets/assets.js";
 import Image from "next/image.js";
