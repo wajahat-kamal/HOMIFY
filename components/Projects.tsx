@@ -1,5 +1,6 @@
 import React from "react";
 import { projectsData } from "../assets/assets.js";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -26,8 +27,10 @@ const Projects = () => {
             className="relative w-full sm:w-[45%] lg:w-[22%] flex-shrink-0"
           >
             {/* Project Image */}
-            <img
+            <Image
               src={project.image}
+              width={300}
+              height={300}
               alt={project.title}
               className="w-full h-auto mb-14 rounded-lg shadow-lg"
             />
