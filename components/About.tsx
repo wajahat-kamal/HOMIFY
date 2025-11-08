@@ -1,5 +1,6 @@
 import React from "react";
 import brandImg from "../assets/brand_img.png";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
       {/* Content */}
       <div className="flex flex-col md:flex-row items-center md:items-end md:gap-20">
         {/* Image */}
-        <img
+        <Image
           src={brandImg}
           alt="Homify Brand"
           className="w-full sm:w-1/2 md:w-1/3 max-w-sm rounded-lg shadow-lg hover:scale-105 transition-transform duration-500"
