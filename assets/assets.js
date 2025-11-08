@@ -13,6 +13,12 @@ import project_img_4 from "./project_img_4.jpg";
 import project_img_5 from "./project_img_5.jpg";
 import project_img_6 from "./project_img_6.jpg";
 
+import profile_img_1 from "./profile_img_1.png";
+import profile_img_2 from "./profile_img_2.png";
+import profile_img_3 from "./profile_img_3.png";
+import profile_img_4 from "./profile_img_4.jpg";
+import profile_img_5 from "./profile_img_5.jpg";
+
 export const assets = {
   logo,
   logo_dark,
@@ -65,7 +71,6 @@ export const projectsData = [
     location: "Chicago",
     image: project_img_6,
   },
-
 ];
 
 export const testimonialsData = [
@@ -75,7 +80,7 @@ export const testimonialsData = [
     rating: 5,
     review:
       "Buying my home through Buildify was a wonderful experience. The team was transparent and supportive throughout the process!",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: profile_img_1,
   },
   {
     name: "Michael Lee",
@@ -83,7 +88,7 @@ export const testimonialsData = [
     rating: 4,
     review:
       "They helped me find a modern apartment in my budget. Excellent service and communication!",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: profile_img_2,
   },
   {
     name: "Emma Williams",
@@ -91,7 +96,7 @@ export const testimonialsData = [
     rating: 5,
     review:
       "Very professional and reliable. I love my new home—it’s exactly what I dreamed of!",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    image: profile_img_3,
   },
   {
     name: "Liam Brown",
@@ -99,7 +104,7 @@ export const testimonialsData = [
     rating: 5,
     review:
       "Smooth process and quick closing. Buildify team truly cares about their clients!",
-    image: "https://randomuser.me/api/portraits/men/27.jpg",
+    image: profile_img_4,
   },
   {
     name: "Olivia Martinez",
@@ -107,7 +112,6 @@ export const testimonialsData = [
     rating: 5,
     review:
       "Homify made the entire buying experience stress-free! Their attention to detail and understanding of my needs were outstanding. Highly recommended!",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-  }
-  
+    image: profile_img_5,
+  },
 ];
